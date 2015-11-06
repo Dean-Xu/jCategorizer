@@ -60,3 +60,6 @@ $("#jC-container").jCategorizer();
 
 ## License
 This plugin is available under [the MIT license](http://mths.be/mit).
+
+## Author
+Dean Xu
