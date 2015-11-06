@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>jCategorizer by Dean-Xu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">jCategorizer</h1>
+      <h2 class="project-tagline">A responsive Android looking category manager.</h2>
+      <a href="https://github.com/Dean-Xu/jCategorizer" class="btn">View on GitHub</a>
+      <a href="https://github.com/Dean-Xu/jCategorizer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Dean-Xu/jCategorizer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="jcategorizer" class="anchor" href="#jcategorizer" aria-hidden="true"><span class="octicon octicon-link"></span></a>jCategorizer</h1>
+
+<p>This is a jquery responsive category manager that will render a given html ul list to an Android looking category manager. </p>
+
+<p>It is simple to use and easy to manage. </p>
+
+<p>Hope you enjoy this lightweight plugin!</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Include script and css after the jQuery library (unless you are packaging scripts somehow else):</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/jCategorizer.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>css/jCategorizer.css<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>jC-container<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">ul</span>&gt;
+        &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Chat<span class="pl-pds">"</span></span>&gt; <span class="pl-c">&lt;!-- Category Description--&gt;</span>
+            &lt;<span class="pl-ent">ul</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Facebook<span class="pl-pds">"</span></span>&gt; <span class="pl-c">&lt;!-- Item Description--&gt;</span>
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/facebook.png<span class="pl-pds">"</span></span>/&gt; <span class="pl-c">&lt;!-- Item Icon--&gt;</span>
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>LinkedIn<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/linkedin.png<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>WeiChat<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/weichat.jpg<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Twitter<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/twitter.jpg<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+            &lt;/<span class="pl-ent">ul</span>&gt;
+        &lt;/<span class="pl-ent">li</span>&gt;
+        &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Game<span class="pl-pds">"</span></span>&gt; <span class="pl-c">&lt;!-- Category Description--&gt;</span>
+            &lt;<span class="pl-ent">ul</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Need For Speed<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/game1.png<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Star War III<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/game2.png<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">jc-desc</span>=<span class="pl-s"><span class="pl-pds">"</span>Chess<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pic/game3.png<span class="pl-pds">"</span></span>/&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+            &lt;/<span class="pl-ent">ul</span>&gt;
+        &lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ul</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h3>
+<a id="js" class="anchor" href="#js" aria-hidden="true"><span class="octicon octicon-link"></span></a>JS</h3>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>#jC-container<span class="pl-pds">"</span></span>).jCategorizer();</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<p>jCategorizer supports various options to customize the style of the categories and the items:</p>
+
+<ul>
+<li>width - the width of the category box</li>
+<li>height - the height of the category box</li>
+<li>background - the background color of the category box</li>
+<li>fontColor - the color of the category text</li>
+<li>iconPerRow - the number of icons per row in a category box</li>
+<li>iconMargin - the space between each icon in a category box</li>
+</ul>
+
+<p>How to use:</p>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>#jC-container<span class="pl-pds">"</span></span>).jCategorizer({
+    option1<span class="pl-k">:</span>value1,
+    option2,value2,
+    ...
+});</pre></div>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><img src="https://raw.githubusercontent.com/Dean-Xu/jCategorizer/master/example_1.png" alt="alt tag">
+<img src="https://raw.githubusercontent.com/Dean-Xu/jCategorizer/master/example_2.png" alt="alt tag"></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This plugin is available under <a href="http://mths.be/mit">the MIT license</a>.</p>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Dean Xu</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Dean-Xu/jCategorizer">jCategorizer</a> is maintained by <a href="https://github.com/Dean-Xu">Dean-Xu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
