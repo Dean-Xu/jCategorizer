@@ -1,71 +1,374 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/jCategorizer.css">
+		<title>jCategorizer Demo</title>
+		<link rel="stylesheet" href="css/jCategorizer-min.css">
 		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="js/jCategorizer.js"></script>
+		<script type="text/javascript" src="js/jCategorizer-min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 	</head>
 	<body>
-		<div id="jC-container">
-			<ul>
-				<li jc-desc="Chat">
-					<ul>
-						<li jc-desc="Facebook">
-							<img src="pic/facebook.png"/>
-						</li>
-						<li jc-desc="LinkedIn">
-							<img src="pic/linkedin.png"/>
-						</li>
-						<li jc-desc="WeiChat">
-							<img src="pic/weichat.jpg"/>
-						</li>
-						<li jc-desc="Twitter">
-							<img src="pic/twitter.jpg"/>
-						</li>
-					</ul>
-				</li>
-				<li jc-desc="Game">
-					<ul>
-						<li jc-desc="Need For Speed">
-							<img src="pic/game1.png"/>
-						</li>
-						<li jc-desc="Star War III">
-							<img src="pic/game2.png"/>
-						</li>
-						<li jc-desc="Chess">
-							<img src="pic/game3.png"/>
-						</li>
-					</ul>
-				</li>
-				<li jc-desc="Folder3">
-					<ul>
-						<li jc-desc="Item3_1">
-						</li>
-						<li jc-desc="Item3_2">
-						</li>
-						<li jc-desc="Item3_3">
-						</li>
-						<li jc-desc="Item3_4">
-						</li>
-						<li jc-desc="Item3_5">
-						</li>
-					</ul>
-				</li>
-				<li jc-desc="Folder4">
-					<ul>
-						<li jc-desc="Item4_1">
-						</li>
-						<li jc-desc="Item4_2">
-						</li>
-						<li jc-desc="Item4_3">
-						</li>
-						<li jc-desc="Item4_4">
-						</li>
-						<li jc-desc="Item4_5">
-						</li>
-					</ul>
-				</li>
-			<ul>
+		<div style="border-bottom: 1px solid #000000; margin-bottom:5px; margin-top:5px;">
+		<h3>jCategorizer is a jquery responsive category manager that will render a given html ul list to an Android looking category manager. It is simple to use and easy to manage.</h3>
+		<h3>For documentation, please click <a href="http://dean-xu.github.io/">here</a>.</h3>
+		<h3>Feel free to email me at dxsudbury@gmail.com if you have any question or suggestion.</h3>
+		<h3>Hope you enjoy this lightweight plugin!</h3>
+		<h3>- Dean Xu</h3>
+		</div>
+		<div id="example_1">
+			<h3>Example 1: Simply call jCategorizer() to initialize your category.</h3>
+			<p>
+			$("#jC-container").jCategorizer();
+			</p>
+			<div id="jC-container">
+				<ul>
+					<li jc-desc="Chat">
+						<ul>
+							<li jc-desc="Facebook">
+								<img src="pic/facebook.png"/>
+							</li>
+							<li jc-desc="LinkedIn">
+								<img src="pic/linkedin.png"/>
+							</li>
+							<li jc-desc="WeiChat">
+								<img src="pic/weichat.jpg"/>
+							</li>
+							<li jc-desc="Twitter">
+								<img src="pic/twitter.jpg"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Game">
+						<ul>
+							<li jc-desc="Need For Speed">
+								<img src="pic/game1.png"/>
+							</li>
+							<li jc-desc="Star War III">
+								<img src="pic/game2.png"/>
+							</li>
+							<li jc-desc="Chess">
+								<img src="pic/game3.png"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder3">
+						<ul>
+							<li jc-desc="Item3_1">
+							</li>
+							<li jc-desc="Item3_2">
+							</li>
+							<li jc-desc="Item3_3">
+							</li>
+							<li jc-desc="Item3_4">
+							</li>
+							<li jc-desc="Item3_5">
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder4">
+						<ul>
+							<li jc-desc="Item4_1">
+							</li>
+							<li jc-desc="Item4_2">
+							</li>
+							<li jc-desc="Item4_3">
+							</li>
+							<li jc-desc="Item4_4">
+							</li>
+							<li jc-desc="Item4_5">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="example_2">
+			<h3>Example 2: Pass "width" and "height" to specify the width and height of your category box when initializing your category.</h3>
+			<p>
+			$("#jC-container2").jCategorizer({
+			width: '65px',
+			height: '65px'
+			});
+			</p>
+			<div id="jC-container2">
+				<ul>
+					<li jc-desc="Chat">
+						<ul>
+							<li jc-desc="Facebook">
+								<img src="pic/facebook.png"/>
+							</li>
+							<li jc-desc="LinkedIn">
+								<img src="pic/linkedin.png"/>
+							</li>
+							<li jc-desc="WeiChat">
+								<img src="pic/weichat.jpg"/>
+							</li>
+							<li jc-desc="Twitter">
+								<img src="pic/twitter.jpg"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Game">
+						<ul>
+							<li jc-desc="Need For Speed">
+								<img src="pic/game1.png"/>
+							</li>
+							<li jc-desc="Star War III">
+								<img src="pic/game2.png"/>
+							</li>
+							<li jc-desc="Chess">
+								<img src="pic/game3.png"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder3">
+						<ul>
+							<li jc-desc="Item3_1">
+							</li>
+							<li jc-desc="Item3_2">
+							</li>
+							<li jc-desc="Item3_3">
+							</li>
+							<li jc-desc="Item3_4">
+							</li>
+							<li jc-desc="Item3_5">
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder4">
+						<ul>
+							<li jc-desc="Item4_1">
+							</li>
+							<li jc-desc="Item4_2">
+							</li>
+							<li jc-desc="Item4_3">
+							</li>
+							<li jc-desc="Item4_4">
+							</li>
+							<li jc-desc="Item4_5">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="example_3">
+			<h3>Example 3: Pass "iconPerRow" to specify the number of icons displayed per row when initializing your category.</h3>
+			<p>
+			$("#jC-container3").jCategorizer({
+			width: '65px',
+			height: '65px',
+			iconPerRow: '2'
+			});
+			</p>
+			<div id="jC-container3">
+				<ul>
+					<li jc-desc="Chat">
+						<ul>
+							<li jc-desc="Facebook">
+								<img src="pic/facebook.png"/>
+							</li>
+							<li jc-desc="LinkedIn">
+								<img src="pic/linkedin.png"/>
+							</li>
+							<li jc-desc="WeiChat">
+								<img src="pic/weichat.jpg"/>
+							</li>
+							<li jc-desc="Twitter">
+								<img src="pic/twitter.jpg"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Game">
+						<ul>
+							<li jc-desc="Need For Speed">
+								<img src="pic/game1.png"/>
+							</li>
+							<li jc-desc="Star War III">
+								<img src="pic/game2.png"/>
+							</li>
+							<li jc-desc="Chess">
+								<img src="pic/game3.png"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder3">
+						<ul>
+							<li jc-desc="Item3_1">
+							</li>
+							<li jc-desc="Item3_2">
+							</li>
+							<li jc-desc="Item3_3">
+							</li>
+							<li jc-desc="Item3_4">
+							</li>
+							<li jc-desc="Item3_5">
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder4">
+						<ul>
+							<li jc-desc="Item4_1">
+							</li>
+							<li jc-desc="Item4_2">
+							</li>
+							<li jc-desc="Item4_3">
+							</li>
+							<li jc-desc="Item4_4">
+							</li>
+							<li jc-desc="Item4_5">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="example_4">
+			<h3>Example 4: Pass "overlayType" (shadow/blur) to specify the type of overlay when initializing your category.</h3>
+			<p>
+			$("#jC-container4").jCategorizer({
+			overlayType: 'blur',
+			width: '65px',
+			height: '65px',
+			iconPerRow: '2'
+			});
+			</p>
+			<div id="jC-container4">
+				<ul>
+					<li jc-desc="Chat">
+						<ul>
+							<li jc-desc="Facebook">
+								<img src="pic/facebook.png"/>
+							</li>
+							<li jc-desc="LinkedIn">
+								<img src="pic/linkedin.png"/>
+							</li>
+							<li jc-desc="WeiChat">
+								<img src="pic/weichat.jpg"/>
+							</li>
+							<li jc-desc="Twitter">
+								<img src="pic/twitter.jpg"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Game">
+						<ul>
+							<li jc-desc="Need For Speed">
+								<img src="pic/game1.png"/>
+							</li>
+							<li jc-desc="Star War III">
+								<img src="pic/game2.png"/>
+							</li>
+							<li jc-desc="Chess">
+								<img src="pic/game3.png"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder3">
+						<ul>
+							<li jc-desc="Item3_1">
+							</li>
+							<li jc-desc="Item3_2">
+							</li>
+							<li jc-desc="Item3_3">
+							</li>
+							<li jc-desc="Item3_4">
+							</li>
+							<li jc-desc="Item3_5">
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder4">
+						<ul>
+							<li jc-desc="Item4_1">
+							</li>
+							<li jc-desc="Item4_2">
+							</li>
+							<li jc-desc="Item4_3">
+							</li>
+							<li jc-desc="Item4_4">
+							</li>
+							<li jc-desc="Item4_5">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="example_5">
+			<h3>Example 5: There are a lot more options you can pass to create your own personalized jCategorizer.</h3>
+			<p>
+			$("#jC-container5").jCategorizer({
+			overlayType: 'blur',
+			width: '65px',
+			height: '65px',
+			background: '#ffb3b3',
+			fontColor: '#FF0000',
+			border: '2px dotted #FF0000',
+			iconMargin: '3px',
+			iconPerRow: '2'
+			});
+			</p>
+			<div id="jC-container5">
+				<ul>
+					<li jc-desc="Chat">
+						<ul>
+							<li jc-desc="Facebook">
+								<img src="pic/facebook.png"/>
+							</li>
+							<li jc-desc="LinkedIn">
+								<img src="pic/linkedin.png"/>
+							</li>
+							<li jc-desc="WeiChat">
+								<img src="pic/weichat.jpg"/>
+							</li>
+							<li jc-desc="Twitter">
+								<img src="pic/twitter.jpg"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Game">
+						<ul>
+							<li jc-desc="Need For Speed">
+								<img src="pic/game1.png"/>
+							</li>
+							<li jc-desc="Star War III">
+								<img src="pic/game2.png"/>
+							</li>
+							<li jc-desc="Chess">
+								<img src="pic/game3.png"/>
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder3">
+						<ul>
+							<li jc-desc="Item3_1">
+							</li>
+							<li jc-desc="Item3_2">
+							</li>
+							<li jc-desc="Item3_3">
+							</li>
+							<li jc-desc="Item3_4">
+							</li>
+							<li jc-desc="Item3_5">
+							</li>
+						</ul>
+					</li>
+					<li jc-desc="Folder4">
+						<ul>
+							<li jc-desc="Item4_1">
+							</li>
+							<li jc-desc="Item4_2">
+							</li>
+							<li jc-desc="Item4_3">
+							</li>
+							<li jc-desc="Item4_4">
+							</li>
+							<li jc-desc="Item4_5">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
